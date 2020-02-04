@@ -1,6 +1,6 @@
 {
     "name": "bryanthw1020/live-video-broadcast-manager",
-    "description": "Laravel live video broadcast manager for Tencent TRTC service integration.",
+    "description": "Laravel live video broadcast manager for Tencent LVB service integration.",
     "license": "MIT",
     "authors": [
         {
