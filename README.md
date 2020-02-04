@@ -1,5 +1,5 @@
 # live-video-broadcast-manager
-Laravel live video broadcast manager for Tencent TRTC service integration
+Laravel live video broadcast manager for Tencent LVB service integration
 
 ## Installation
 To  install, run `composer require bryanthw1020/live-video-broadcast-manager`.
