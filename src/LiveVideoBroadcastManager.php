@@ -36,6 +36,8 @@ class LiveVideoBroadcastManager
     /**
      * Get all online live stream broadcast list
      *
+     * @param string $appName
+     * @param string $streamName
      * @param string $region
      * @param string $endpoint
      * @param int $pageNum
@@ -43,12 +45,12 @@ class LiveVideoBroadcastManager
      *
      * @return \bryanthw1020\LiveVideoBroadcastManager\LiveStreamOnlineList
      */
-    public static function liveStreamOnlineList(string $region = "ap-singapore", string $endpoint = "live.tencentcloudapi.com", int $pageNum = 1, int $pageSize = 20): LiveStreamOnlineList
+    public static function liveStreamOnlineList(string $appName = "live", string $streamName = "", string $region = "ap-singapore", string $endpoint = "live.tencentcloudapi.com", int $pageNum = 1, int $pageSize = 20): LiveStreamOnlineList
     {
         try {
             $lvbManager = new self($region, $endpoint);
             $request = new DescribeLiveStreamOnlineListRequest();
-            $request->fromJsonString(json_encode(["PageNum" => $pageNum, "PageSize" => $pageSize]));
+            $request->fromJsonString(json_encode(["AppName" => $appName, "StreamName" => $streamName, "PageNum" => $pageNum, "PageSize" => $pageSize]));
             $response = $lvbManager->client->DescribeLiveStreamOnlineList($request);
 
             return new LiveStreamOnlineList($response->RequestId, $response->OnlineInfo, $response->PageNum, $response->PageSize, $response->TotalPage, $response->TotalNum);

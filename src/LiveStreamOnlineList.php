@@ -51,7 +51,7 @@ class LiveStreamOnlineList
     private function beautifyData($data): array
     {
         return Collection::make($data)->map(function ($onlineStream) {
-            $url = config('livevideobroadcastmanager.playback_domain') . "/live/" . $onlineStream->StreamName;
+            $url = config('livevideobroadcastmanager.playback_domain') . "/{$onlineStream->AppName}/{$onlineStream->StreamName}";
 
             return [
                 "stream_urls" => [
