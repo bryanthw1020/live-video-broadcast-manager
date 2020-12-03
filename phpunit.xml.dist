@@ -16,9 +16,9 @@
     </filter>
     <php>
         <env name="APP_ENV" value="testing"/>
-        <env name="TC_SECRET_ID" value=""/>
-        <env name="TC_SECRET_KEY" value=""/>
-        <env name="TC_STREAM_DOMAIN" value=""/>
-        <env name="TC_PLAYBACK_DOMAIN" value=""/>
+        <env name="TC_LVB_SECRET_ID" value=""/>
+        <env name="TC_LVB_SECRET_KEY" value=""/>
+        <env name="TC_LVB_STREAM_DOMAIN" value=""/>
+        <env name="TC_LVB_PLAYBACK_DOMAIN" value=""/>
     </php>
 </phpunit>
